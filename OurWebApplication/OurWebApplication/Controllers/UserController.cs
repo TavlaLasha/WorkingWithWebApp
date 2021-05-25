@@ -48,18 +48,57 @@ namespace OurWebApplication.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post([FromBody]UserDTO u)
         {
+            using (LearningCenterContext db = new LearningCenterContext())
+            {
+                User udt = new User
+                {
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    Email = u.Email,
+                    IDNumber = u.IDNumber,
+                    Password = u.Password,
+                    PhoneNumber = u.PhoneNumber
+                };
+                db.Users.Add(udt);
+                db.SaveChanges();
+            }
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]string value)
+        public void Put(string IDNumber, [FromBody]UserDTO u)
         {
+            using (LearningCenterContext db = new LearningCenterContext())
+            {
+                if (!db.Users.Any(i => i.IDNumber.Equals(IDNumber)))
+                    throw new Exception($"User with ID Number {IDNumber} not found!");
+
+                var udt = db.Users.Where(i => i.IDNumber.Equals(IDNumber)).First();
+
+                udt.FirstName = u.FirstName;
+                udt.LastName = u.LastName;
+                udt.Email = u.Email;
+                udt.IDNumber = u.IDNumber;
+                udt.Password = u.Password;
+                udt.PhoneNumber = u.PhoneNumber;
+                
+                db.SaveChanges();
+            }
         }
 
         // DELETE api/values/5
-        public void Delete(int id)
+        public void Delete(string IDNumber)
         {
+            using (LearningCenterContext db = new LearningCenterContext())
+            {
+                if (!db.Users.Any(i => i.IDNumber.Equals(IDNumber)))
+                    throw new Exception($"User with ID Number {IDNumber} not found!");
+
+                var udt = db.Users.Where(i => i.IDNumber.Equals(IDNumber)).First();
+                db.Users.Remove(udt);
+                db.SaveChanges();
+            }
         }
     }
 }
