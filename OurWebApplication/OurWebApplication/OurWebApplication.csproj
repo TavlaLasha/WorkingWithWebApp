@@ -195,7 +195,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\SubjectController.cs" />
     <Compile Include="EF\Cours.cs" />
     <Compile Include="EF\CourseLocation.cs" />
     <Compile Include="EF\CourseStream.cs" />
