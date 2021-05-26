@@ -9,7 +9,7 @@ using System.Web.Http;
 
 namespace OurWebApplication.Controllers
 {
-    public class ValuesController : ApiController
+    public class LocationController : ApiController
     {
         // GET api/values
         public IEnumerable<LocationViewModel> Get()
