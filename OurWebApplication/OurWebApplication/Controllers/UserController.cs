@@ -18,7 +18,6 @@ namespace OurWebApplication.Controllers
             {
                 return db.Users.Select(i => new UserDTO
                 {
-                    ID = i.ID,
                     FirstName = i.FirstName,
                     LastName = i.LastName,
                     Email = i.Email,
@@ -30,13 +29,12 @@ namespace OurWebApplication.Controllers
         }
 
         // GET api/values/5
-        public UserDTO Get(int id)
+        public UserDTO Get(string IDNumber)
         {
             using (LearningCenterContext db = new LearningCenterContext())
             {
-                return db.Users.Where(i => i.ID.Equals(id)).Select( i => new UserDTO
+                return db.Users.Where(i => i.IDNumber.Equals(IDNumber)).Select( i => new UserDTO
                 {
-                    ID = i.ID,
                     FirstName = i.FirstName,
                     LastName = i.LastName,
                     Email = i.Email,
@@ -52,6 +50,9 @@ namespace OurWebApplication.Controllers
         {
             using (LearningCenterContext db = new LearningCenterContext())
             {
+                if (!db.Users.Any(i => i.IDNumber.Equals(u.IDNumber)))
+                    throw new Exception($"User with ID Number {u.IDNumber} already exists!");
+
                 User udt = new User
                 {
                     FirstName = u.FirstName,
