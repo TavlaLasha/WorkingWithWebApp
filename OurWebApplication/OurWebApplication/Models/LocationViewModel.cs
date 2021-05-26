@@ -5,7 +5,7 @@ using System.Web;
 
 namespace OurWebApplication.Models
 {
-    public class Class1
+    public class LocationViewModel
     {
         public string Name { get; set; }
 

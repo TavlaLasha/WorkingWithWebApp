@@ -44,6 +44,9 @@ namespace OurWebApplication.Controllers
         {
             using (LearningCenterContext db = new LearningCenterContext())
             {
+                if (!db.Locations.Any(i => i.Name.Equals(l.Name)))
+                    throw new Exception($"ადგილმდებარეობა სახელით {l.Name} ვერ მოიძებნა!");
+
                 Location location = new Location
                 {
                     Name = l.Name,
