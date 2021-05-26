@@ -29,12 +29,6 @@ namespace OurWebApplication.Controllers
             }
         }
 
-        // GET api/values/5
-        public string Get(int id)
-        {
-            return "value";
-        }
-
         // POST api/values
         public void Post([FromBody] LectureViewModel lec)
         {
