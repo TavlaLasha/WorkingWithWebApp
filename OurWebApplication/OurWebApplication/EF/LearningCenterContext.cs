@@ -91,5 +91,7 @@ namespace OurWebApplication.EF
                 .HasForeignKey(e => e.StudentID)
                 .WillCascadeOnDelete(false);
         }
+
+        public System.Data.Entity.DbSet<OurWebApplication.Models.CurriculumViewModel> CurriculumViewModels { get; set; }
     }
 }

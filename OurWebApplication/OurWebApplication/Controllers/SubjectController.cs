@@ -9,7 +9,7 @@ using OurWebApplication.EF;
 
 namespace OurWebApplication.Controllers
 {
-    public class ValuesController : ApiController
+    public class SubjectController : ApiController
     {
         // GET api/values
         public IEnumerable<SubjectViewModel> Get()
@@ -28,11 +28,11 @@ namespace OurWebApplication.Controllers
         }
 
         // GET api/values/5
-        public SubjectViewModel Get(int id)
+        public SubjectViewModel Get(string code)
         {
             using (LearningCenterContext db = new LearningCenterContext())
             {
-                return db.Subjects.Where(i => i.ID.Equals(id)).Select(i => new SubjectViewModel
+                return db.Subjects.Where(i => i.Code.Equals(code)).Select(i => new SubjectViewModel
                 {
                     Name = i.Name,
                     Description = i.Description,
@@ -65,14 +65,14 @@ namespace OurWebApplication.Controllers
         }
 
         // PUT api/values/5
-        public void Put(int id, [FromBody]SubjectViewModel s)
+        public void Put(string code, [FromBody]SubjectViewModel s)
         {
             using (LearningCenterContext db = new LearningCenterContext())
             {
-                if (!db.Subjects.Any(i => i.ID.Equals(id)))
-                    throw new Exception($"Es sagani am {id} -it ver moidzebna");
+                if (!db.Subjects.Any(i => i.Code.Equals(code)))
+                    throw new Exception($"Es sagani am {code} -it ver moidzebna");
 
-                var r = db.Subjects.Where(i => i.ID.Equals(id)).First();
+                var r = db.Subjects.Where(i => i.Code.Equals(code)).First();
                 r.Name = s.Name;
                 r.Description = s.Description;
                 r.Code = s.Code;
@@ -84,14 +84,14 @@ namespace OurWebApplication.Controllers
         }
 
         // DELETE api/values/5
-        public void Delete(int id)
+        public void Delete(string code)
         {
             using (LearningCenterContext db = new LearningCenterContext())
             {
-                if (!db.Subjects.Any(i => i.ID.Equals(id)))
-                    throw new Exception($"Es sagani am {id} -it ver moidzebna");
+                if (!db.Subjects.Any(i => i.Code.Equals(code)))
+                    throw new Exception($"Es sagani am {code} -it ver moidzebna");
 
-                var r = db.Subjects.Where(i => i.ID.Equals(id)).First();
+                var r = db.Subjects.Where(i => i.Code.Equals(code)).First();
                 db.Subjects.Remove(r);
                 db.SaveChanges();
 

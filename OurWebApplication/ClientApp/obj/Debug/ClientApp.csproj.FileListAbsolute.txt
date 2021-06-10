@@ -1,0 +1,14 @@
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\bin\Debug\ClientApp.exe.config
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\bin\Debug\ClientApp.exe
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\bin\Debug\ClientApp.pdb
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\obj\Debug\ClientApp.csprojResolveAssemblyReference.cache
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\obj\Debug\ClientApp.Form1.resources
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\obj\Debug\ClientApp.Properties.Resources.resources
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\obj\Debug\ClientApp.SubjectFrm.resources
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\obj\Debug\ClientApp.csproj.GenerateResource.Cache
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\obj\Debug\ClientApp.exe
+C:\Users\lasha\Desktop\C#\WebAPI\WorkingWithWebApp\OurWebApplication\ClientApp\obj\Debug\ClientApp.pdb
